@@ -132,7 +132,7 @@ export const addAdmin = async (req, res) => {
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
-    hashedPassword = await bcrypt.hash(newDob, 10);
+    hashedPassword = await bcrypt.hash("", 10);
     var passwordUpdated = false;
     const newAdmin = await new Admin({
       name,
